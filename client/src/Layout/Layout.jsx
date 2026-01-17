@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import Sidebar from "../Components/Sidebar";
-
+import ChatBot from "../Components/Chatbot";
 export default function Layout({ children, hideBar, hideNav, hideFooter }) {
   return (
     <>
@@ -18,6 +18,9 @@ export default function Layout({ children, hideBar, hideNav, hideFooter }) {
 
         {/* footer */}
         {!hideFooter && <Footer />}
+        
+        {/* chatbot */}
+        {!hideNav && !hideBar && <ChatBot />}
       </main>
     </>
   );
